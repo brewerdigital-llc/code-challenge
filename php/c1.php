@@ -1,27 +1,27 @@
 <?php
 
 /*
-Challenge 1: Implement ResponseInterface and get it to return "8"
+Challenge 1: Implement AnswerInterface and get it to echo "8"
 */
 
 class Question
 {
-    public function __construct(ResponseInterface $response)
+    public function __construct(AnswerInterface $answer)
     {
         echo "What is 4 + 4?\n";
-        $response = $response->get()->the()->response();
+        $response = $answer>get()->the()->answer();
 
-        if ($response instanceof ResponseInterface) {
+        if ($answer instanceof AnswerInterface) {
             echo $response . PHP_EOL;
         }
     }
 }
 
-interface ResponseInterface
+interface AnswerInterface
 {
     public function get();
     public function the();
-    public function response();
+    public function answer();
 }
 
 // start editing here
@@ -30,5 +30,5 @@ interface ResponseInterface
 
 // end editing here
 
-$response = new Answer;
-$question = new Question($response);
+$answer = new Answer;
+$question = new Question($answer);
