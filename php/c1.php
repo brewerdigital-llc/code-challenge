@@ -9,7 +9,7 @@ class Question
     public function __construct(AnswerInterface $answer)
     {
         echo "What is 4 + 4?\n";
-        $response = $answer>get()->the()->answer();
+        $response = $answer->get()->the()->answer();
 
         if ($answer instanceof AnswerInterface) {
             echo $response . PHP_EOL;
